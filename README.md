@@ -30,9 +30,9 @@ If you need na API Key, please follow the documentation [here](https://developer
 
 ### SASS Terminal Setup
 - Open the Plugin folder in Terminal
-- CD Into assets/css folder
-- Type into your terminal : sass --watch sass/tmdb-plugin-style.sass:tmdb-plugin-style.css
+- CD Into ```assets/css``` folder
+- Type into your terminal : ```sass --watch sass/tmdb-plugin-style.sass:tmdb-plugin-style.css```
 - Watch the magic as it compiles your style sheet on save.
-- To compress the css use the following : sass --watch sass/tmdb-plugin-style.sass:tmdb-plugin-style.css --style compressed
+- To compress the css use the following : ```sass --watch sass/tmdb-plugin-style.sass:tmdb-plugin-style.css --style compressed```
 - Watch the magic as it compiles your style sheet on save.
 - CTRL + C to stop
