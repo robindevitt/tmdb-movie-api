@@ -1,0 +1,143 @@
+#movies-wrapper
+    width: 100%
+    max-width: 1300px
+    margin: auto
+    &.trending
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        .single-movie
+            margin: 0 10px 20px 10px
+            width: 22%
+            position: relative
+            border: 2px solid
+            border-radius: 10px
+            &.checked
+                &::before
+                    content: 'FAVORITE'
+                    width: 100%
+                    position: absolute
+                    top: 0px
+                    left: 0px
+                    font-size: 14px
+                    padding: 5px 0 
+                    text-align: center
+                    background-color: green
+                    color: #fff
+                    z-index: 9999
+            @media ( max-width: 900px )
+                width: 30%
+            @media ( max-width: 660px )
+                width: 44%
+            @media ( max-width: 400px )
+                width: 95%
+            .movie-lightbox
+                display: none
+            h3.movie-title
+                margin: 10px 0
+                font-size: 20px
+                text-align: center
+            p.released
+                font-size: 14px
+                text-align: center
+            .hover
+                display: none
+                opacity: 0
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0px
+                left: 0px
+                align-items: center
+                justify-content: center
+                text-align: center
+                background-color: #fff
+                border-radius: 10px
+            &:hover
+                .hover
+                    display: flex
+                    opacity: 1
+            &.active
+                .close
+                    color: white
+                    position: absolute
+                    top: 0px
+                    left: 0px
+                    width: 100%
+                    text-align: center
+                    text-transform: uppercase
+                .movie-lightbox
+                    position: fixed
+                    width: 100%
+                    height: 100%
+                    left: 0px
+                    top: 0px
+                    display: flex
+                    z-index: 99999999
+                    background-color: rgba(0,0,0,.95)
+                    .inner
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        flex-wrap: nowrap
+                        width: 50%
+                        margin: auto
+                        
+                        img
+                            width: 40%
+                        .content-wrap
+                            width: 60%
+                            padding: 20px
+                            text-align: left
+                            color: #fff
+                            h3.movie-title,
+                            p.released
+                                text-align: left
+                            .addToFavorites
+                                input[type=checkbox] + label
+                                    span.add
+                                        display: inline-block
+                                    span.remove
+                                        display: none
+                                input[type=checkbox]:checked + label
+                                    color: green
+                                    span.add
+                                        display: none
+                                    span.remove
+                                        display: inline-block
+    .navigation
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        div
+            a
+                line-height: 30px
+                span
+                    display: inline-block
+                    vertical-align: top
+                    line-height: 26px
+        .theForm
+            font-size: 14px
+            .page-select
+                display: flex
+                flex-direction: column
+                flex-wrap: wrap
+                align-items: center
+                .wrap
+                    display: flex
+                    input
+                        width: 100px
+                    button
+                        width: 100px
+                        box-sizing: border-box
+                        padding: 0px
+
+#contact-wrapper
+    width: 100%
+    display: flex
+    max-width: 1200px
+    margin: auto
+    .half
+        width: 50%
+        padding: 30px
